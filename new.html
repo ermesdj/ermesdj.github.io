@@ -1,0 +1,243 @@
+<!doctype html>
+<html lang="it">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>Profilo Pentester — Nome Cognome</title>
+  <meta name="description" content="Landing page professionale per un penetration tester: servizi, skills, case study e contatti." />
+  <style>
+    :root{
+      --bg: #0f1724;
+      --card: #0b1220;
+      --muted: #9aa4b2;
+      --accent: #7dd3fc;
+      --glass: rgba(255,255,255,0.04);
+      --text: #e6eef8;
+      --radius: 14px;
+      font-family: Inter, ui-sans-serif, system-ui, -apple-system, "Segoe UI", Roboto, "Helvetica Neue", Arial;
+    }
+    *{box-sizing:border-box}
+    html,body{height:100%;margin:0;background:linear-gradient(180deg,#071028 0%, #071821 100%);color:var(--text);}
+    .container{max-width:1100px;margin:36px auto;padding:28px}
+    header{display:flex;align-items:center;justify-content:space-between;gap:16px}
+    .brand{display:flex;align-items:center;gap:14px}
+    .logo{width:56px;height:56px;border-radius:12px;background:linear-gradient(135deg,var(--accent),#60a5fa);display:flex;align-items:center;justify-content:center;font-weight:700;color:#012;box-shadow:0 6px 18px rgba(0,0,0,0.6)}
+    h1{font-size:26px;margin:0}
+    p.lead{margin:6px 0 0;color:var(--muted)}
+
+    main{display:grid;grid-template-columns:1fr 360px;gap:28px;margin-top:28px}
+    .card{background:linear-gradient(180deg, rgba(255,255,255,0.02), rgba(255,255,255,0.01));padding:20px;border-radius:var(--radius);backdrop-filter: blur(6px);box-shadow: 0 8px 30px rgba(2,6,23,0.7)}
+
+    /* Hero */
+    .hero{padding:28px}
+    .hero h2{font-size:32px;margin:0 0 8px}
+    .hero p{color:var(--muted);margin:0 0 18px}
+    .cta-row{display:flex;gap:12px;flex-wrap:wrap}
+    .btn{display:inline-flex;align-items:center;gap:10px;padding:10px 16px;border-radius:12px;border:0;cursor:pointer;font-weight:600}
+    .btn-primary{background:linear-gradient(90deg,var(--accent),#60a5fa);color:#012}
+    .btn-ghost{background:transparent;border:1px solid rgba(255,255,255,0.06);color:var(--text)}
+
+    /* Skills */
+    .skills{display:flex;flex-wrap:wrap;gap:10px;margin-top:14px}
+    .chip{padding:8px 12px;border-radius:999px;background:var(--glass);color:var(--muted);font-weight:600;font-size:13px}
+
+    /* Right column */
+    aside .profile-meta{display:flex;gap:14px;align-items:center}
+    .avatar{width:78px;height:78px;border-radius:12px;background:linear-gradient(180deg,#1b2430,#0e1620);display:flex;align-items:center;justify-content:center;font-size:22px}
+    .meta h3{margin:0}
+    .meta p{margin:4px 0 0;color:var(--muted)}
+    .socials{display:flex;gap:10px;margin-top:12px}
+    .socials a{padding:8px;border-radius:8px;background:rgba(255,255,255,0.02);text-decoration:none;color:var(--text);font-weight:600}
+
+    /* Services */
+    .grid-2{display:grid;grid-template-columns:repeat(2,1fr);gap:12px}
+    .service{padding:12px;border-radius:12px;background:rgba(255,255,255,0.015);}
+    .service h4{margin:0 0 6px}
+    .muted{color:var(--muted);font-size:14px}
+
+    /* Portfolio */
+    .portfolio{display:grid;grid-template-columns:repeat(2,1fr);gap:12px;margin-top:12px}
+    .case{padding:12px;border-radius:12px;background:linear-gradient(180deg, rgba(255,255,255,0.01), rgba(255,255,255,0.015))}
+    .case h5{margin:0 0 8px}
+    .case p{margin:0;color:var(--muted)}
+
+    /* Contact */
+    form{display:flex;flex-direction:column;gap:10px}
+    input,textarea{background:transparent;border:1px solid rgba(255,255,255,0.06);padding:10px;border-radius:10px;color:var(--text);outline:none}
+    textarea{min-height:120px}
+    footer{margin-top:24px;color:var(--muted);font-size:13px}
+
+    /* Responsive */
+    @media (max-width:980px){main{grid-template-columns:1fr}aside{order:2}}
+  </style>
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="brand">
+        <div class="logo">PT</div>
+        <div>
+          <h1>Nome Cognome — Pentester</h1>
+          <p class="lead">Sicurezza applicativa · Red Team · Audit infrastrutturale</p>
+        </div>
+      </div>
+      <div style="display:flex;gap:12px;align-items:center">
+        <button class="btn btn-ghost" onclick="document.documentElement.classList.toggle('light')">Tema</button>
+        <a class="btn btn-primary" href="#contatti">Contattami</a>
+      </div>
+    </header>
+
+    <main>
+      <section class="card hero">
+        <h2>Penetration testing professionale — traduciamo vulnerabilità in mitigazioni.</h2>
+        <p>Aiuto team e aziende a trovare e correggere punti deboli prima che li trovino gli attaccanti. Report chiari, proof-of-concept riproducibili e remediation practical.</p>
+
+        <div class="cta-row">
+          <a class="btn btn-primary" href="#servizi">Servizi</a>
+          <a class="btn btn-ghost" href="#portfolio">Portfolio & Case Study</a>
+          <a class="btn btn-ghost" href="mailto:tuo@email.com">Email</a>
+        </div>
+
+        <div class="skills" aria-label="Competenze">
+          <div class="chip">Web App (OWASP Top10)</div>
+          <div class="chip">Red Teaming</div>
+          <div class="chip">SAST / DAST</div>
+          <div class="chip">Burp Suite</div>
+          <div class="chip">Cloud (AWS/GCP/Azure)</div>
+          <div class="chip">Mobile (iOS/Android)</div>
+        </div>
+
+        <hr style="margin:18px 0;border:none;border-top:1px solid rgba(255,255,255,0.03)">
+
+        <h3>Valore offerto</h3>
+        <ul class="muted">
+          <li>Test manuali approfonditi combinati con tooling automatizzato.</li>
+          <li>Report esecutivi per il management + technical appendix per gli sviluppatori.</li>
+          <li>Collaborazione per implementare mitigazioni e verificare le correzioni.</li>
+        </ul>
+      </section>
+
+      <aside>
+        <div class="card">
+          <div class="profile-meta">
+            <div class="avatar">PT</div>
+            <div class="meta">
+              <h3>Nome Cognome</h3>
+              <p class="muted">Pentester indipendente — 7+ anni esperienza</p>
+              <div class="socials">
+                <a href="#">GitHub</a>
+                <a href="#">LinkedIn</a>
+                <a href="#">Blog</a>
+              </div>
+            </div>
+          </div>
+
+          <hr style="margin:12px 0;border:none;border-top:1px solid rgba(255,255,255,0.03)">
+
+          <div>
+            <h4>Servizi principali</h4>
+            <div class="grid-2">
+              <div class="service"><h4>Web App Pentest</h4><p class="muted">Audit approfondato contro OWASP Top10, business logic, authentication bugs.</p></div>
+              <div class="service"><h4>Red Team</h4><p class="muted">Simulazioni realistiche per testare detection & response.</p></div>
+              <div class="service"><h4>Cloud Security</h4><p class="muted">Revisione IAM, storage, logging e hardening.</p></div>
+              <div class="service"><h4>SCA & CI/CD</h4><p class="muted">Integrazione di scan e remediation nelle pipeline.</p></div>
+            </div>
+          </div>
+
+          <hr style="margin:12px 0;border:none;border-top:1px solid rgba(255,255,255,0.03)">
+
+          <div>
+            <h4>Contatti rapidi</h4>
+            <p class="muted">Email: <a href="mailto:tuo@email.com">tuo@email.com</a></p>
+            <p class="muted">Disponibile per consulenze remote e onsite</p>
+            <a class="btn btn-ghost" href="#cv">Scarica CV</a>
+          </div>
+        </div>
+
+        <div style="height:18px"></div>
+
+        <div class="card">
+          <h4>Tariffe indicative</h4>
+          <p class="muted">Progetti personalizzati: prezzo variabile in base a scope e SLA. Esempio: web app small (1-2 settimane) — preventivo su richiesta.</p>
+        </div>
+      </aside>
+
+      <!-- Portfolio & case study (sotto il main sulla colonna principale) -->
+      <section style="grid-column:1/2;">
+        <div class="card" id="portfolio">
+          <h3>Case study & Progetti</h3>
+          <p class="muted">Selezione anonima di engagement — fornisco proof-of-concept e remediation.</p>
+
+          <div class="portfolio">
+            <article class="case">
+              <h5>Web App Fintech — Privilege escalation</h5>
+              <p class="muted">Trovata una combinazione di misconfigurazioni API che permetteva escalation di privilegi. Fornita PoC e patch.</p>
+            </article>
+            <article class="case">
+              <h5>Cloud infra — Data exposure</h5>
+              <p class="muted">Bucket S3/BLOB pubblici scoperti tramite automation; implementate policy e alerting.</p>
+            </article>
+            <article class="case">
+              <h5>Red Team — Simulazione APT</h5>
+              <p class="muted">Simulazione di compromissione con persistence e lateral movement per testare detection.</p>
+            </article>
+            <article class="case">
+              <h5>Mobile App — Insecure Storage</h5>
+              <p class="muted">Credenziali memorizzate in chiaro; segnalata e verificata la correzione.</p>
+            </article>
+          </div>
+
+        </div>
+
+        <div style="height:16px"></div>
+
+        <div class="card" id="servizi">
+          <h3>Come lavoro</h3>
+          <ol class="muted">
+            <li>Scoping e accordo NDA</li>
+            <li>Recon e scans automatizzati</li>
+            <li>Test manuali e exploitation controllata</li>
+            <li>Report con severity, PoC e remediation</li>
+            <li>Verifica delle correzioni (retest)</li>
+          </ol>
+        </div>
+
+        <div style="height:16px"></div>
+
+        <div class="card" id="contatti">
+          <h3>Contattami</h3>
+          <form action="mailto:tuo@email.com" method="post" enctype="text/plain">
+            <input type="text" name="nome" placeholder="Nome" required />
+            <input type="email" name="email" placeholder="Email" required />
+            <input type="text" name="oggetto" placeholder="Oggetto" />
+            <textarea name="messaggio" placeholder="Breve descrizione del progetto / cosa vuoi testare" required></textarea>
+            <button type="submit" class="btn btn-primary">Invia richiesta</button>
+          </form>
+
+          <footer>
+            <p class="muted">Nota: questo è un template. Sostituisci i dati di contatto e aggiungi referenze reali prima di pubblicare.</p>
+          </footer>
+        </div>
+      </section>
+
+    </main>
+  </div>
+
+  <script>
+    // Simple theme toggle (light/dark)
+    (function(){
+      const root = document.documentElement;
+      const isLight = root.classList.contains('light');
+      // preserve preference in localStorage
+      if(localStorage.getItem('theme') === 'light') root.classList.add('light');
+      document.querySelectorAll('[onclick]').forEach(el=>{
+        // keep existing onclick handlers
+      });
+      // small accessibility: focus outlines
+      document.addEventListener('keydown', e=>{
+        if(e.key === 'Tab') document.body.classList.add('show-focus');
+      });
+    })();
+  </script>
+</body>
+</html>
